@@ -1,0 +1,42 @@
+
+{% extends 'HR/hr_home.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Interview Details</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Job ID</th>
+                    <th>Candidate ID</th>
+                    <th>Interview Date</th>
+                    <th>Interview Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for interview in data %}
+                <tr>
+                    <td>{{ interview.JOB_ID.job_title }}</td>
+                    <td>{{ interview.CANDIDATE_ID.full_name }}</td>
+                    <td>{{ interview.interview_date }}</td>
+                    <td>{{ interview.interview_time }}</td>
+                    <td>{{ interview.interview_sts }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock %}

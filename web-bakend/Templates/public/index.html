@@ -1,0 +1,179 @@
+{% include "public/header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screening System</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            padding: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), 
+                        url('/static/bg.jpg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+            background: #ff9800;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .hero a:hover {
+            background: #e68900;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px 10%;
+            text-align: center;
+            background: white;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            background: #fff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e3c72;
+            color: white;
+        }
+    </style
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-bar w3-dark-gray w3-padding">
+        
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/register" class="w3-bar-item w3-button">Register</a>
+        
+        <a href="#contact" class="w3-bar-item w3-button">Features</a>
+        <a href="/login"  class="w3-bar-item w3-button w3-right w3-blue">Login</a>
+       
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>AI-Based Resume Screening System</h1>
+            <p>Efficient & Smart Hiring with AI</p>
+            <!-- <a href="register.html" class="w3-button w3-blue w3-large">Get Started</a> -->
+            <a href="/register" class="w3-button w3-blue w3-large">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="w3-container w3-padding-64" id="features">
+    <h2 class="w3-center w3-text-dark-blue w3-margin-bottom" style="font-size: 2.5rem; font-weight: bold;">Key Features</h2>
+    
+    <div class="w3-row-padding w3-margin-top">
+        <div class="w3-third w3-center">
+            <div class="w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow" style="transition: 0.3s;">
+                <h3 class="w3-text-indigo w3-large">⚡ AI Resume Parsing</h3>
+                <p class="w3-text-gray">Extract and analyze resume data using advanced NLP techniques.</p>
+            </div>
+        </div>
+        <div class="w3-third w3-center">
+            <div class="w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow" style="transition: 0.3s;">
+                <h3 class="w3-text-indigo w3-large">📊 Candidate Ranking</h3>
+                <p class="w3-text-gray">Automatically rank candidates based on job relevance and skills.</p>
+            </div>
+        </div>
+        <div class="w3-third w3-center">
+            <div class="w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow" style="transition: 0.3s;">
+                <h3 class="w3-text-indigo w3-large">🔍 Skill Gap Analysis</h3>
+                <p class="w3-text-gray">Identify missing skills and suggest personalized improvements.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-gray w3-padding-32" id="contact">
+        <h2 class="w3-center">Contact Us</h2>
+        <p class="w3-center">For inquiries, email us at: <b>support@airesumescreening.com</b></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-dark-gray w3-padding-16">
+        <p>© 2025 AI Resume Screening System</p>
+    </footer>
+
+</body>
+</html>
+
+
+ 
+
+{% include "public/footer.html" %}

@@ -1,0 +1,56 @@
+{% extends "admin/header.html" %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Users</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">View Hr</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Company Name</th>
+                        <th>Contact No</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ i.fullname }}</td>
+                        <td>{{ i.hr_email }}</td>
+                        <td>{{ i.company_name }}</td>
+                        <td>{{ i.contact_no }}</td>
+                        <td>{{ i.role }}</td>
+                        <td class="{% if i.hrstatus == 'Active' %}text-success{% else %}text-danger{% endif %}">
+                            {{ i.hrstatus }}
+                        </td>
+                        <td>
+                            <div class="d-flex gap-2">
+                                <a href="accept_hr/{{ i.LOGIN_id }}" class="btn btn-success btn-sm">Accept</a>
+                                <a href="reject_hr/{{ i.LOGIN_id }}" class="btn btn-danger btn-sm">Reject</a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { color: rgb(0,0,128); font-weight: bold; }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(0,0,0); }
+.s4 { color: rgb(0,0,255); font-weight: bold; }
+.s5 { color: rgb(0,0,128); font-weight: bold; }
+.s6 { color: rgb(0,128,0); font-weight: bold; }
+.s7 { color: rgb(0,0,255); font-weight: bold; }
+.s8 { color: rgb(0,0,255); }
+.s9 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+index.html</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">{% </span><span class="s1">include </span><span class="s2">&quot;public/header.html&quot; </span><span class="s0">%} 
+ 
+</span><span class="s3">&lt;!DOCTYPE </span><span class="s4">html</span><span class="s3">&gt;</span><span class="s0"> 
+</span><span class="s3">&lt;</span><span class="s5">html </span><span class="s4">lang=</span><span class="s6">&quot;en&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+</span><span class="s3">&lt;</span><span class="s5">head</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">meta </span><span class="s4">charset=</span><span class="s6">&quot;UTF-8&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">meta </span><span class="s4">name=</span><span class="s6">&quot;viewport&quot; </span><span class="s4">content=</span><span class="s6">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">title</span><span class="s3">&gt;</span><span class="s0">AI Resume Screening System</span><span class="s3">&lt;/</span><span class="s5">title</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">link </span><span class="s4">rel=</span><span class="s6">&quot;stylesheet&quot; </span><span class="s4">href=</span><span class="s6">&quot;https://www.w3schools.com/w3css/4/w3.css&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">style</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s1">body </span><span class="s0">{ 
+            </span><span class="s7">font-family</span><span class="s0">: </span><span class="s2">'Arial'</span><span class="s0">, </span><span class="s2">sans-serif</span><span class="s0">; 
+            </span><span class="s7">background-color</span><span class="s0">: </span><span class="s1">#f4f4f9</span><span class="s0">; 
+            </span><span class="s7">margin</span><span class="s0">: </span><span class="s8">0</span><span class="s0">; 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">0</span><span class="s0">; 
+        } 
+         
+        </span><span class="s9">/* Navbar */</span><span class="s0"> 
+        .</span><span class="s1">navbar </span><span class="s0">{ 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">linear-gradient</span><span class="s0">(</span><span class="s8">90</span><span class="s2">deg</span><span class="s0">, </span><span class="s1">#1e3c72</span><span class="s0">, </span><span class="s1">#2a5298</span><span class="s0">); 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">12</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">box-shadow</span><span class="s0">: </span><span class="s8">0 2</span><span class="s2">px </span><span class="s8">10</span><span class="s2">px </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0.2</span><span class="s0">); 
+        } 
+         
+        .</span><span class="s1">navbar a </span><span class="s0">{ 
+            </span><span class="s7">color</span><span class="s0">: </span><span class="s2">white</span><span class="s0">; 
+            </span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">18</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">12</span><span class="s2">px </span><span class="s8">20</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">text-decoration</span><span class="s0">: </span><span class="s2">none</span><span class="s0">; 
+            </span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">; 
+        } 
+         
+        .</span><span class="s1">navbar a</span><span class="s0">:</span><span class="s1">hover </span><span class="s0">{ 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">255</span><span class="s0">, </span><span class="s8">255</span><span class="s0">, </span><span class="s8">255</span><span class="s0">, </span><span class="s8">0.2</span><span class="s0">); 
+            </span><span class="s7">border-radius</span><span class="s0">: </span><span class="s8">5</span><span class="s2">px</span><span class="s0">; 
+        } 
+ 
+        </span><span class="s9">/* Hero Section */</span><span class="s0"> 
+        .</span><span class="s1">hero </span><span class="s0">{ 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">linear-gradient</span><span class="s0">(</span><span class="s2">to right</span><span class="s0">, </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">30</span><span class="s0">, </span><span class="s8">60</span><span class="s0">, </span><span class="s8">114</span><span class="s0">, </span><span class="s8">0.8</span><span class="s0">), </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">42</span><span class="s0">, </span><span class="s8">82</span><span class="s0">, </span><span class="s8">152</span><span class="s0">, </span><span class="s8">0.8</span><span class="s0">)),  
+                        </span><span class="s1">url</span><span class="s0">(</span><span class="s2">'/static/bg.jpg'</span><span class="s0">) </span><span class="s2">no-repeat center center</span><span class="s0">/</span><span class="s2">cover</span><span class="s0">; 
+            </span><span class="s7">height</span><span class="s0">: </span><span class="s8">90</span><span class="s2">vh</span><span class="s0">; 
+            </span><span class="s7">display</span><span class="s0">: </span><span class="s2">flex</span><span class="s0">; 
+            </span><span class="s7">align-items</span><span class="s0">: </span><span class="s2">center</span><span class="s0">; 
+            </span><span class="s7">justify-content</span><span class="s0">: </span><span class="s2">center</span><span class="s0">; 
+            </span><span class="s7">text-align</span><span class="s0">: </span><span class="s2">center</span><span class="s0">; 
+            </span><span class="s7">color</span><span class="s0">: </span><span class="s2">white</span><span class="s0">; 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">20</span><span class="s2">px</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">hero h1 </span><span class="s0">{ 
+            </span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">3.5</span><span class="s2">rem</span><span class="s0">; 
+            </span><span class="s7">font-weight</span><span class="s0">: </span><span class="s2">bold</span><span class="s0">; 
+            </span><span class="s7">text-transform</span><span class="s0">: </span><span class="s2">uppercase</span><span class="s0">; 
+            </span><span class="s7">margin-bottom</span><span class="s0">: </span><span class="s8">10</span><span class="s2">px</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">hero p </span><span class="s0">{ 
+            </span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">1.3</span><span class="s2">rem</span><span class="s0">; 
+            </span><span class="s7">margin-bottom</span><span class="s0">: </span><span class="s8">20</span><span class="s2">px</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">hero a </span><span class="s0">{ 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">12</span><span class="s2">px </span><span class="s8">24</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">1.2</span><span class="s2">rem</span><span class="s0">; 
+            </span><span class="s7">text-decoration</span><span class="s0">: </span><span class="s2">none</span><span class="s0">; 
+            </span><span class="s7">color</span><span class="s0">: </span><span class="s2">white</span><span class="s0">; 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">#ff9800</span><span class="s0">; 
+            </span><span class="s7">border-radius</span><span class="s0">: </span><span class="s8">25</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">hero a</span><span class="s0">:</span><span class="s1">hover </span><span class="s0">{ 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">#e68900</span><span class="s0">; 
+        } 
+ 
+        </span><span class="s9">/* Features Section */</span><span class="s0"> 
+        .</span><span class="s1">features </span><span class="s0">{ 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">50</span><span class="s2">px </span><span class="s8">10</span><span class="s0">%; 
+            </span><span class="s7">text-align</span><span class="s0">: </span><span class="s2">center</span><span class="s0">; 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s2">white</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">features h2 </span><span class="s0">{ 
+            </span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">2.5</span><span class="s2">rem</span><span class="s0">; 
+            </span><span class="s7">margin-bottom</span><span class="s0">: </span><span class="s8">20</span><span class="s2">px</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">feature-box </span><span class="s0">{ 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">#fff</span><span class="s0">; 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">20</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">margin</span><span class="s0">: </span><span class="s8">15</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">border-radius</span><span class="s0">: </span><span class="s8">8</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">box-shadow</span><span class="s0">: </span><span class="s8">0 4</span><span class="s2">px </span><span class="s8">10</span><span class="s2">px </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0.1</span><span class="s0">); 
+            </span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">; 
+        } 
+ 
+        .</span><span class="s1">feature-box</span><span class="s0">:</span><span class="s1">hover </span><span class="s0">{ 
+            </span><span class="s7">transform</span><span class="s0">: </span><span class="s1">scale</span><span class="s0">(</span><span class="s8">1.05</span><span class="s0">); 
+            </span><span class="s7">box-shadow</span><span class="s0">: </span><span class="s8">0 6</span><span class="s2">px </span><span class="s8">15</span><span class="s2">px </span><span class="s1">rgba</span><span class="s0">(</span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0</span><span class="s0">, </span><span class="s8">0.2</span><span class="s0">); 
+        } 
+ 
+        </span><span class="s9">/* Footer */</span><span class="s0"> 
+        .</span><span class="s1">footer </span><span class="s0">{ 
+            </span><span class="s7">text-align</span><span class="s0">: </span><span class="s2">center</span><span class="s0">; 
+            </span><span class="s7">padding</span><span class="s0">: </span><span class="s8">15</span><span class="s2">px</span><span class="s0">; 
+            </span><span class="s7">background</span><span class="s0">: </span><span class="s1">#1e3c72</span><span class="s0">; 
+            </span><span class="s7">color</span><span class="s0">: </span><span class="s2">white</span><span class="s0">; 
+        } 
+    </span><span class="s3">&lt;/</span><span class="s5">style</span><span class="s3"> 
+&lt;/</span><span class="s5">head</span><span class="s3">&gt;</span><span class="s0"> 
+</span><span class="s3">&lt;</span><span class="s5">body</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+    </span><span class="s9">&lt;!-- Navbar --&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-bar w3-dark-gray w3-padding&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+         
+        </span><span class="s3">&lt;</span><span class="s5">a </span><span class="s4">href=</span><span class="s6">&quot;/&quot; </span><span class="s4">class=</span><span class="s6">&quot;w3-bar-item w3-button&quot;</span><span class="s3">&gt;</span><span class="s0">Home</span><span class="s3">&lt;/</span><span class="s5">a</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">a </span><span class="s4">href=</span><span class="s6">&quot;/register&quot; </span><span class="s4">class=</span><span class="s6">&quot;w3-bar-item w3-button&quot;</span><span class="s3">&gt;</span><span class="s0">Register</span><span class="s3">&lt;/</span><span class="s5">a</span><span class="s3">&gt;</span><span class="s0"> 
+         
+        </span><span class="s3">&lt;</span><span class="s5">a </span><span class="s4">href=</span><span class="s6">&quot;#contact&quot; </span><span class="s4">class=</span><span class="s6">&quot;w3-bar-item w3-button&quot;</span><span class="s3">&gt;</span><span class="s0">Features</span><span class="s3">&lt;/</span><span class="s5">a</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">a </span><span class="s4">href=</span><span class="s6">&quot;/login&quot;  </span><span class="s4">class=</span><span class="s6">&quot;w3-bar-item w3-button w3-right w3-blue&quot;</span><span class="s3">&gt;</span><span class="s0">Login</span><span class="s3">&lt;/</span><span class="s5">a</span><span class="s3">&gt;</span><span class="s0"> 
+        
+    </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+    </span><span class="s9">&lt;!-- Hero Section --&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;hero&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">h1</span><span class="s3">&gt;</span><span class="s0">AI-Based Resume Screening System</span><span class="s3">&lt;/</span><span class="s5">h1</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0">Efficient &amp; Smart Hiring with AI</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s9">&lt;!-- &lt;a href=&quot;register.html&quot; class=&quot;w3-button w3-blue w3-large&quot;&gt;Get Started&lt;/a&gt; --&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">a </span><span class="s4">href=</span><span class="s6">&quot;/register&quot; </span><span class="s4">class=</span><span class="s6">&quot;w3-button w3-blue w3-large&quot;</span><span class="s3">&gt;</span><span class="s0">Get Started</span><span class="s3">&lt;/</span><span class="s5">a</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+    </span><span class="s9">&lt;!-- Features Section --&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-container w3-padding-64&quot; </span><span class="s4">id=</span><span class="s6">&quot;features&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">h2 </span><span class="s4">class=</span><span class="s6">&quot;w3-center w3-text-dark-blue w3-margin-bottom&quot; </span><span class="s4">style=</span><span class="s6">&quot;</span><span class="s7">font-size</span><span class="s0">: </span><span class="s8">2.5</span><span class="s2">rem</span><span class="s0">; </span><span class="s7">font-weight</span><span class="s0">: </span><span class="s2">bold</span><span class="s0">;</span><span class="s6">&quot;</span><span class="s3">&gt;</span><span class="s0">Key Features</span><span class="s3">&lt;/</span><span class="s5">h2</span><span class="s3">&gt;</span><span class="s0"> 
+     
+    </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-row-padding w3-margin-top&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-third w3-center&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow&quot; </span><span class="s4">style=</span><span class="s6">&quot;</span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">;</span><span class="s6">&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">h3 </span><span class="s4">class=</span><span class="s6">&quot;w3-text-indigo w3-large&quot;</span><span class="s3">&gt;</span><span class="s0">⚡ AI Resume Parsing</span><span class="s3">&lt;/</span><span class="s5">h3</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">p </span><span class="s4">class=</span><span class="s6">&quot;w3-text-gray&quot;</span><span class="s3">&gt;</span><span class="s0">Extract and analyze resume data using advanced NLP techniques.</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-third w3-center&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow&quot; </span><span class="s4">style=</span><span class="s6">&quot;</span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">;</span><span class="s6">&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">h3 </span><span class="s4">class=</span><span class="s6">&quot;w3-text-indigo w3-large&quot;</span><span class="s3">&gt;</span><span class="s0">📊 Candidate Ranking</span><span class="s3">&lt;/</span><span class="s5">h3</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">p </span><span class="s4">class=</span><span class="s6">&quot;w3-text-gray&quot;</span><span class="s3">&gt;</span><span class="s0">Automatically rank candidates based on job relevance and skills.</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-third w3-center&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-card w3-padding-large w3-round-large w3-white w3-hover-shadow&quot; </span><span class="s4">style=</span><span class="s6">&quot;</span><span class="s7">transition</span><span class="s0">: </span><span class="s8">0.3</span><span class="s2">s</span><span class="s0">;</span><span class="s6">&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">h3 </span><span class="s4">class=</span><span class="s6">&quot;w3-text-indigo w3-large&quot;</span><span class="s3">&gt;</span><span class="s0">🔍 Skill Gap Analysis</span><span class="s3">&lt;/</span><span class="s5">h3</span><span class="s3">&gt;</span><span class="s0"> 
+                </span><span class="s3">&lt;</span><span class="s5">p </span><span class="s4">class=</span><span class="s6">&quot;w3-text-gray&quot;</span><span class="s3">&gt;</span><span class="s0">Identify missing skills and suggest personalized improvements.</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+            </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+</span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+ 
+    </span><span class="s9">&lt;!-- Contact Section --&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">div </span><span class="s4">class=</span><span class="s6">&quot;w3-container w3-light-gray w3-padding-32&quot; </span><span class="s4">id=</span><span class="s6">&quot;contact&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">h2 </span><span class="s4">class=</span><span class="s6">&quot;w3-center&quot;</span><span class="s3">&gt;</span><span class="s0">Contact Us</span><span class="s3">&lt;/</span><span class="s5">h2</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">p </span><span class="s4">class=</span><span class="s6">&quot;w3-center&quot;</span><span class="s3">&gt;</span><span class="s0">For inquiries, email us at: </span><span class="s3">&lt;</span><span class="s5">b</span><span class="s3">&gt;</span><span class="s0">support@airesumescreening.com</span><span class="s3">&lt;/</span><span class="s5">b</span><span class="s3">&gt;&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+    </span><span class="s9">&lt;!-- Footer --&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;</span><span class="s5">footer </span><span class="s4">class=</span><span class="s6">&quot;w3-center w3-dark-gray w3-padding-16&quot;</span><span class="s3">&gt;</span><span class="s0"> 
+        </span><span class="s3">&lt;</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0">© 2025 AI Resume Screening System</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span><span class="s0"> 
+    </span><span class="s3">&lt;/</span><span class="s5">footer</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+</span><span class="s3">&lt;/</span><span class="s5">body</span><span class="s3">&gt;</span><span class="s0"> 
+</span><span class="s3">&lt;/</span><span class="s5">html</span><span class="s3">&gt;</span><span class="s0"> 
+ 
+ 
+  
+ 
+{% </span><span class="s1">include </span><span class="s2">&quot;public/footer.html&quot; </span><span class="s0">%}</span></pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% include "admin/admin_header.html" %}
+<center>
+  <h2>WELCOME ADMIN HOME</h2>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+    }
+    .navbar {
+        background-color: #2980b9;
+        overflow: hidden;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .navbar a:hover {
+        background-color: #1f618d;
+    }
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        background: white;
+        padding: 25px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+    }
+    </style>
+    <div class="navbar">
+        <a href="/">HOME</a>
+        <a href="/admin_view_jobdescription">JOBS</a>
+        <a href="/admin_view_user">USER DETAILS</a>
+        <a href="/login">LOGOUT</a>
+    </div>
+    
+    <div class="container">
+        <h3>Dashboard Overview</h3>
+        <p>Welcome to the admin panel. Manage jobs, users, and system settings.</p>
+    </div>
+
+{% include "admin/admin_footer.html" %}

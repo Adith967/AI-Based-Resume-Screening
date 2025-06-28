@@ -1,0 +1,122 @@
+{% include "public/header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Registration Form</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .form-container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container w3-animate-opacity">
+        <h2>HR Registration Form</h2>
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <td><b>Username</b></td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><b>Full Name</b></td>
+                    <td><input type="text" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <td><b>HR Email</b></td>
+                    <td><input type="email" name="hr_email" required></td>
+                </tr>
+                <tr>
+                    <td><b>Company Name</b></td>
+                    <td><input type="text" name="company_name" required></td>
+                </tr>
+                <tr>
+                    <td><b>Contact No</b></td>
+                    <td><input type="tel" name="contact_no" required></td>
+                </tr>
+                <tr>
+                    <td><b>Role</b></td>
+                    <td>
+                        <select name="role" required>
+                            <option value="">Select Role</option>
+                            <option value="HR Manager">HR Manager</option>
+                            <option value="Recruiter">Recruiter</option>
+                            <option value="Administrator">Administrator</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>HR Status</b></td>
+                    <td>
+                        <select name="hrstatus" required>
+                            <option value="">Select Status</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="submit" value="Register">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+{% include "public/footer.html" %}

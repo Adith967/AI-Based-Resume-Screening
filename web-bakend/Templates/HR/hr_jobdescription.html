@@ -1,0 +1,184 @@
+{#{% extends 'HR/hr_home.html' %}#}
+{#{% block body %}<h2>POSTING JOBS</h2>#}
+{#<form action="" method="POST">#}
+{#    <table>#}
+{#        <tr>#}
+{#            <td><label for="job_title">Job Title:</label></td>#}
+{#            <td><input type="text" id="job_title" name="job_title" required></td>#}
+{#        </tr>#}
+{#        #}
+{#        <tr>#}
+{#            <td><label for="job_desc">Job Description:</label></td>#}
+{#            <td><textarea id="job_desc" name="job_desc" rows="4" required></textarea></td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td><label for="required_skills">Required Skills:</label></td>#}
+{#            <td><input type="text" id="required_skills" name="required_skills" placeholder="E.g., Python, Flutter, SQL" required></td>#}
+{#        </tr>#}
+{##}
+{##}
+{#        <tr>#}
+{#            <td><label for="req_experience">Experience (in years):</label></td>#}
+{#            <td><input type="number" id="req_experience" name="req_experience" min="0" required></td>#}
+{#        </tr>#}
+{# <tr>#}
+{#            <td><label for="req_education">Education Level:</label></td>#}
+{#            <td>#}
+{#                <select id="req_education" name="req_education" required>#}
+{#                    <option value="">Select</option>#}
+{#                    <option value="bachelors">Bachelor's Degree</option>#}
+{#                    <option value="masters">Master's Degree</option>#}
+{#                    <option value="phd">Ph.D.</option>#}
+{#                    <option value="diploma">Diploma</option>#}
+{#                </select>#}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td><label for="job_location">Job location:</label></td>#}
+{#            <td><input type="text" id="job_location" name="job_location"  required></td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td><label for="jobtype">Job Type:</label></td>#}
+{#            <td>#}
+{#                <select id="jobtype" name="jobtype" required>#}
+{#                    <option value="">Select</option>#}
+{#                    <option value="Remote">Remote</option>#}
+{#                    <option value="Hybrid">Hybrid</option>#}
+{#                    <option value="On-site">On-site</option>#}
+{#                   #}
+{#                </select>#}
+{#            </td>#}
+{#        </tr>#}
+{##}
+{#        <tr>#}
+{#            <td colspan="2" style="text-align: center;">#}
+{#                <input type="submit" name="submit" value="post job">#}
+{#            </td>#}
+{#        </tr>#}
+{#        {% for i in data %}#}
+{#            <tr>#}
+{#              <td>#}
+{#            {{ forloop.counter }}#}
+{#          </td>#}
+{#          <td>{{ i.job_title}}</td>#}
+{#          <td>{{ i.required_skills}}</td>#}
+{#          <td>{{ i.req_experience}}</td>#}
+{#          <td>{{ i.req_education }}</td>#}
+{#          <td>{{ i.job_location }}</td>#}
+{#          <td>{{ i.jobtype }}</td>#}
+{#          <td>{{ i.job_desc}}</td>#}
+{#          {% endfor %}#}
+{#    </table>#}
+{#</form>#}
+{#{% endblock %}#}
+
+
+
+
+
+
+{% extends 'HR/hr_home.html' %}
+{% block body %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-dark">POSTING JOBS</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="" method="POST" class="bg-light p-4 rounded shadow-sm">
+                <div class="mb-3">
+                    <label for="job_title" class="form-label">Job Title:</label>
+                    <input type="text" class="form-control" id="job_title" name="job_title" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="job_desc" class="form-label">Job Description:</label>
+                    <textarea class="form-control" id="job_desc" name="job_desc" rows="4" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="required_skills" class="form-label">Required Skills:</label>
+                    <input type="text" class="form-control" id="required_skills" name="required_skills"
+                           placeholder="E.g., Python, Flutter, SQL" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="req_experience" class="form-label">Experience (in years):</label>
+                    <input type="number" class="form-control" id="req_experience" name="req_experience"
+                           min="0" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="req_education" class="form-label">Education Level:</label>
+                    <select class="form-select" id="req_education" name="req_education" required>
+                        <option value="">Select</option>
+                        <option value="bachelors">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="phd">Ph.D.</option>
+                        <option value="diploma">Diploma</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="job_location" class="form-label">Job Location:</label>
+                    <input type="text" class="form-control" id="job_location" name="job_location" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="jobtype" class="form-label">Job Type:</label>
+                    <select class="form-select" id="jobtype" name="jobtype" required>
+                        <option value="">Select</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="On-site">On-site</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" name="submit" value="Post Job" class="btn btn-primary w-50">
+                </div>
+            </form>
+
+            <!-- Job Listings Table -->
+            {% if data %}
+            <div class="table-responsive mt-4">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">Required Skills</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Education</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in data %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ i.job_title }}</td>
+                            <td>{{ i.required_skills }}</td>
+                            <td>{{ i.req_experience }}</td>
+                            <td>{{ i.req_education }}</td>
+                            <td>{{ i.job_location }}</td>
+                            <td>{{ i.jobtype }}</td>
+                            <td>{{ i.job_desc }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 CSS (add to base template head if not present) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS (add to base template body if not present) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

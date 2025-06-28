@@ -1,0 +1,37 @@
+{% include "HR/hr_header.html" %}
+<h2 style="text-align: center; color: #333;">STATUS!</h2>
+<form action="" method="POST" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Candidate Name:</td>
+            <td><input type="text" id="candidate_name" name="candidate_name" required></td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+
+        <tr>
+            <td>Application Status:</td>
+            <td>
+                <select id="application_status" name="application_status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Shortlisted">Shortlisted</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit" name="action" value="update_status">Update Status</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+{% include "HR/hr_footer.html" %}

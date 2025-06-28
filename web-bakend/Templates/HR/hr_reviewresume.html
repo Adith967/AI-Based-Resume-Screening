@@ -1,0 +1,182 @@
+{#{% extends 'HR/hr_home.html' %}#}
+{#{% block body %}#}
+{##}
+{##}
+{#    <style>#}
+{#        table {#}
+{#            width: 50%;#}
+{#            border-collapse: collapse;#}
+{#            margin: 20px auto;#}
+{#            border: 1px solid #ddd;#}
+{#        }#}
+{#        td {#}
+{#            padding: 10px;#}
+{#        }#}
+{#        input, select, textarea {#}
+{#            width: 100%;#}
+{#            padding: 8px;#}
+{#        }#}
+{#        .btn {#}
+{#            padding: 10px 15px;#}
+{#            background: #007bff;#}
+{#            color: white;#}
+{#            border: none;#}
+{#            cursor: pointer;#}
+{#        }#}
+{#        iframe {#}
+{#            width: 100%;#}
+{#            height: 100px;#}
+{#            border: 1px solid #ddd;#}
+{#        }#}
+{#    </style>#}
+{##}
+{#<body>#}
+{##}
+{#    <h2 style="text-align: center;">HR Resume Review</h2>#}
+{##}
+{#    <form action="" method="POST">#}
+{#        <table border="1" border="collapse"><th colspan="1" rowspan="1"></th>#}
+{#            <tr>#}
+{#                <th>SlNo</th>#}
+{#                <th> Candidate Name </th>#}
+{#                <th> Candidate Email </th>#}
+{#                <th> Resume ID </th>#}
+{#                <th>Resume Preview</th>#}
+{#                <th>Status <th>#}
+{#                <th>Candidate Rating:</th>#}
+{#                <th>Review Comments <th></th>#}
+{#            </tr>#}
+{#            {% for i in data %}#}
+{#            <tr>#}
+{#                <td> {{ forloop.counter }}</td>#}
+{#    CANDIDATE_ID =models.ForeignKey(Candidatereg,on_delete=models.CASCADE)#}
+{#                <td>{{ i.CANDIDATE_ID.fullname }}</td>#}
+{#                <td><img src="{{ i.RESUME.resume_file }}" alt=""></td>#}
+{#                <td>{{ i.CANDIDATE_ID.fullname }}</td>#}
+{#                <td>#}
+{#                    <select name="status">#}
+{#                        <option value="Shortlisted">Shortlisted</option>#}
+{#                        <option value="Rejected">Rejected</option>#}
+{#                        <option value="On Hold">On Hold</option>#}
+{#                    </select>#}
+{#                </td>#}
+{#                <td>#}
+{#                    <select name="rating">#}
+{#                        <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>#}
+{#                        <option value="4">⭐⭐⭐⭐ (Good)</option>#}
+{#                        <option value="3">⭐⭐⭐ (Average)</option>#}
+{#                        <option value="2">⭐⭐ (Below Average)</option>#}
+{#                        <option value="1">⭐ (Poor)</option>#}
+{#                    </select>#}
+{#                </td>#}
+{#                <td><textarea name="review_comments" rows="4"></textarea></td>#}
+{#                <td colspan="2" style="text-align: center;">#}
+{#                    <button type="submit" class="btn">Submit Review</button>#}
+{#                </td>#}
+{#            </tr>#}
+{#            {% endfor %}#}
+{##}
+{##}
+{#          #}
+{#            #}
+{#          #}
+{#                #}
+{#        #}
+{#        </table>#}
+{#    </form>#}
+{##}
+{##}
+{##}
+{#{% endblock %}#}
+
+
+
+
+
+
+{% extends 'HR/hr_home.html' %}
+{% block body %}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-dark">HR Resume Review</h2>
+
+    <form action="" method="POST">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">SlNo</th>
+                        <th scope="col">Candidate Name</th>
+                        <th scope="col">Candidate Email</th>
+                        <th scope="col">Resume ID</th>
+                        <th scope="col">Resume Preview</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Candidate Rating</th>
+                        <th scope="col">Review Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <!-- CANDIDATE_ID =models.ForeignKey(Candidatereg,on_delete=models.CASCADE) -->
+                        <td>{{ i.CANDIDATE_ID.fullname }}</td>
+                        <td>{{ i.CANDIDATE_ID.email }}</td> <!-- Assuming email exists in your model -->
+                        <td>{{ i.id }}</td> <!-- Assuming there's an ID field -->
+                        <td>
+                            <img src="{{ i.RESUME.resume_file }}" alt="Resume Preview" class="img-fluid" style="max-width: 100px;">
+                        </td>
+                        <td>
+                            <select name="status" class="form-select">
+                                <option value="Shortlisted">Shortlisted</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="On Hold">On Hold</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="rating" class="form-select">
+                                <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+                                <option value="4">⭐⭐⭐⭐ (Good)</option>
+                                <option value="3">⭐⭐⭐ (Average)</option>
+                                <option value="2">⭐⭐ (Below Average)</option>
+                                <option value="1">⭐ (Poor)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <textarea name="review_comments" rows="4" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+{#                    <tr>#}
+{#                        <td colspan="8" class="text-center">#}
+{#                            <button type="submit" class="btn btn-primary mt-3">Submit Review</button>#}
+{#                        </td>#}
+{#                    </tr>#}
+                </tfoot>
+            </table>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap 5 CSS (add to base template head if not present) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS (add to base template body if not present) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    /* Minimal custom CSS to enhance Bootstrap */
+    table {
+        margin: 0 auto;
+    }
+    .table th, .table td {
+        vertical-align: middle;
+    }
+    .btn-primary {
+        padding: 10px 30px;
+    }
+</style>
+
+{% endblock %}
