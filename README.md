@@ -55,4 +55,4 @@ flutter run
 
 **Adithya Biju**  
 📍 Vaikom, Kottayam  
-📧 adithyabiju123@gmail.com
+📧 adithyabijuadi@gmail.com
