@@ -27,7 +27,6 @@ This is my MCA final project. It helps companies automatically check and rank re
 - Parse resumes using PyPDF2
 - Extract skills and rank resumes
 - Match resume with job description
-- Auto-generate interview questions
 - Admin and company login
 - Firebase for login in app
 
